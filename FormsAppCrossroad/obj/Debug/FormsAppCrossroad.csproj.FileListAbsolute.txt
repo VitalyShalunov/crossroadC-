@@ -1,0 +1,57 @@
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.Cache
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Menu.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Instruction.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Cross.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Cross.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Instruction.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Menu.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad — копия\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Cross.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Instruction.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Menu.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Cross.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Instruction.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Menu.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.cache
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\ISPU\2 курс\лабораторные работы по ООП\FormsAppCrossroad_main~delegate\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
