@@ -26,12 +26,8 @@ namespace FormsAppCrossroad
 
         private void back_Click(object sender, EventArgs e)
         {
-            //Form menu = Application.OpenForms[0];
             Program.menu.Show();
             this.Hide();
-            //Menu main = new Menu(0);
-            //main.Show();
-            //this.Hide();
         }
     }
 }

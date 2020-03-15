@@ -76,40 +76,75 @@ namespace FormsAppCrossroad
                 cross.PerformMove();
             else
             {
-                timer1.Stop();
-                timer2.Stop();
-                timer3.Stop();
-                timer4.Stop();
-                timerGame.Stop();
-                
-                //var main = new Menu();
-                Program.menu.totalPoint = total;
-                switch (reason)
-                {
-                    case 1:
-                        Program.menu.reason.Text = "Пробка сверху";
-                        break;
-                    case 2:
-                        Program.menu.reason.Text = "Пробка справа";
-                        break;
-                    case 3:
-                        Program.menu.reason.Text = "Пробка слева";
-                        break;
-                    case 4:
-                        Program.menu.reason.Text = "Пробка снизу";
-                        break;
-                    case 5:
-                        Program.menu.reason.Text = "Авария";
-                        break;
-                }
-                if (Program.menu.bestSession < total)
-                {
-                    Program.menu.bestSession = total;
-                }
-                Program.menu.Show();
-                this.Hide();
+                EndGame();
             }
         }
+
+        private void EndGame()
+        {
+            timer1.Stop();
+            timer2.Stop();
+            timer3.Stop();
+            timer4.Stop();
+            timerGame.Stop();
+
+            Program.menu.totalPoint = total;
+            switch (reason)
+            {
+                case 1:
+                    Program.menu.reason.Text = "Пробка сверху";
+                    break;
+                case 2:
+                    Program.menu.reason.Text = "Пробка справа";
+                    break;
+                case 3:
+                    Program.menu.reason.Text = "Пробка слева";
+                    break;
+                case 4:
+                    Program.menu.reason.Text = "Пробка снизу";
+                    break;
+                case 5:
+                    Program.menu.reason.Text = "Авария";
+                    break;
+            }
+            if (Program.menu.bestSession < total)
+            {
+                Program.menu.bestSession = total;
+            }
+            Thread myThread = new Thread(new ThreadStart(UpdatePointOfCustomer));
+            myThread.Start();
+            Program.menu.Show();
+            this.Hide();
+        }
+
+        private void UpdatePointOfCustomer()
+        {
+           // using (var db = new MyDbContext())
+            {
+                Customer Customer = Program.db.Customers.FirstOrDefault(customer => customer.Name == Program.menu.userName.Text);
+                if (Customer != null)
+                {
+                    if (Customer.Point < total)
+                    {
+                        Customer.Point = total;
+                        Program.menu.bestcustomer.Text = "Your best : " + Customer.Point;
+                        Program.db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    var newCustomer = new Customer()
+                    {
+                        Name = Program.menu.userName.Text,
+                        Point = total
+                    };
+                    Program.db.Customers.Add(newCustomer);
+                    Program.db.SaveChanges();
+                }
+
+            }
+        }
+
         private void pictureBox1_Paint(object sender, PaintEventArgs e)
         {
             g = e.Graphics;

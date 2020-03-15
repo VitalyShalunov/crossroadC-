@@ -13,8 +13,10 @@ namespace FormsAppCrossroad
         /// </summary>
         /// 
         public static Menu menu;
+        public static MyDbContext db;
         static void Main()
         {
+            db = new MyDbContext();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(menu = new Menu());
