@@ -7,7 +7,14 @@ namespace FormsAppCrossroad
 {
     class Cross : Crossroad
     {
-        public int[] countcar = new int[4]; //кол-во машин в определенном направлении
+        public int this [int index]
+        {
+            get { return countcar[index]; }
+            set { countcar[index] = value; }
+        }
+
+        //private readonly T[] _array;
+        private int[] countcar = new int[4]; //кол-во машин в определенном направлении
         protected Crossroad form = new Crossroad();
         private int i;
         int countStop1;

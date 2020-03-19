@@ -26,7 +26,7 @@ namespace FormsAppCrossroad
         public static event ActionTrafficLight ChangeTrafficLight23;
 
         protected static Graphics g;
-        protected static Graphics graph;
+        public static Graphics graph;
         private static Graphics graphforTL;
         public static Graphics graphTL
         {
@@ -39,7 +39,7 @@ namespace FormsAppCrossroad
                 graphforTL = value;
             }
         }
-        protected static Cross cross;
+        public static Cross cross;
         protected MemberOfTraffic carStop1, carStop2, carStop3, carStop4;
         private void timer1_Tick(object sender, EventArgs e)
         {

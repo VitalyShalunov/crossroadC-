@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 
 namespace FormsAppCrossroad
 {
-    class SpecCar : MemberOfTraffic
-    {
+	class SpecCar : MemberOfTraffic
+	{
 		private Random rnd = new Random();
 		private string pathFile = "img/spec_car";
 		public SpecCar() : base(55, 80, 8)
-        {
+		{
 			//pathFile += random.Next(1, 4).ToString();
 			//pathFile += ".png";
 			//img = Image.FromFile(pathFile);
@@ -32,7 +32,7 @@ namespace FormsAppCrossroad
 			MemberOfTraffic own = this;
 			Rotate(ref own);
 			int color1, color2, color3;
-			switch (random.Next(0,3))
+			switch (random.Next(0, 3))
 			{
 				case 0:
 					color1 = 189;
@@ -83,22 +83,22 @@ namespace FormsAppCrossroad
 					speedMax = 4;
 					speedNow = MaxSpeed;
 					break;
-				//case 1:
-				//	x = form.Size.Width / 2 - 115;
-				//	y = 0;
-				//	break;
-				//case 2:
-				//	x = form.Size.Width;
-				//	y = form.Size.Height / 2 - 105;
-				//	break;
-				//case 3:
-				//	x = 0;
-				//	y = form.Size.Height / 2 + 115;
-				//	break;
-				//case 4:
-				//	x = form.Size.Width / 2 + 105;
-				//	y = form.Size.Height;
-				//	break;
+					//case 1:
+					//	x = form.Size.Width / 2 - 115;
+					//	y = 0;
+					//	break;
+					//case 2:
+					//	x = form.Size.Width;
+					//	y = form.Size.Height / 2 - 105;
+					//	break;
+					//case 3:
+					//	x = 0;
+					//	y = form.Size.Height / 2 + 115;
+					//	break;
+					//case 4:
+					//	x = form.Size.Width / 2 + 105;
+					//	y = form.Size.Height;
+					//	break;
 			}
 			//MaxSpeed += 4;
 			ChangeLine = 0;
@@ -147,11 +147,11 @@ namespace FormsAppCrossroad
 			int checkCoord;
 
 			SetSpeed();
-		
+
 			switch (ChangeLine)
 			{
 				case 0:
-					if (DistanceToNext>30)
+					if (DistanceToNext > 30)
 					{
 						speedNow = MaxSpeed;
 					}
@@ -165,22 +165,22 @@ namespace FormsAppCrossroad
 				case 1:
 					if (AtTheLine != 1)
 					{
-					
-						int answer=0;
-						answer = cross.CanChangeLine(this);
+
+						int answer = 0;
+						answer = Crossroad.cross.CanChangeLine(this);
 						checkCoord = CheckCoord();
-						if (answer  == 1)
+						if (answer == 1)
 						{
 							//CheckSetLink = 1;
 							if (CheckSetLink == 1)
 							{
 								SpecCar car = this;
-								
-								int res = cross.SetLinkIfSpecCarChangeLines(ref car, 1);
+
+								int res = Crossroad.cross.SetLinkIfSpecCarChangeLines(ref car, 1);
 								CheckSetLink = 0;
 								if (res == 0)
 								{
-                                    this.Next = cross.CheckLast(ref car);
+									this.Next = Crossroad.cross.CheckLast(ref car);
 									//this.Next = cross.CheckLast(ref car);
 									//if (DistanceToNext>40)
 									//{
@@ -209,28 +209,28 @@ namespace FormsAppCrossroad
 							//	}
 							base.Ride();
 						}
-							
+
 					}
 					if (AtTheLine == 1)
 					{
 						speedNow = MaxSpeed;
-						var answer = cross.DistanceToSpecCar(this);
+						var answer = Crossroad.cross.DistanceToSpecCar(this);
 						checkCoord = CheckCoord();
-						if (answer == 2000 && checkCoord!=1)
+						if (answer == 2000 && checkCoord != 1)
 						{
 							//CheckSetLink = 1;
 							ChangeLine = 2;
 						}
 						else
 						{
-							ChangeLine = 0; 
+							ChangeLine = 0;
 						}
 					}
 					break;
 				case 2:
 					if (AtTheLine != 2)
 					{
-						var answer = cross.DistanceToSpecCar(this);
+						var answer = Crossroad.cross.DistanceToSpecCar(this);
 						checkCoord = CheckCoord();
 						if (answer > 600 && answer < 2000 || checkCoord == 1)
 						{
@@ -244,7 +244,7 @@ namespace FormsAppCrossroad
 								speedNow = Next.SpeedNow;
 							}
 						}
-						
+
 						RideOwn(0);
 						//RemoveOwn();
 						//ChangeCoordOutLine();
@@ -252,30 +252,30 @@ namespace FormsAppCrossroad
 					}
 					else
 					{
-						
+
 						base.Ride();
 					}
 					checkCoord = CheckCoord();
 					if (AtTheLine == 2)
 					{
 						SpecCar car = this;
-						cross.SetLinkIfSpecCarChangeLines(ref car, 0);
+						Crossroad.cross.SetLinkIfSpecCarChangeLines(ref car, 0);
 						CheckSetLink = 1;
 						speedNow = MaxSpeed;
 						ChangeLine = 0;
 					}
 					break;
 				default:
-					
+
 					break;
 
 			}
-			
-			
+
+
 		}
 		void RideOwn(int inout)
 		{
-			int response= 0;
+			int response = 0;
 			MemberOfTraffic member = this;
 			//switch (this.Destination)
 			//{
@@ -292,14 +292,14 @@ namespace FormsAppCrossroad
 			//		response = cross.SkipOrNot(ref cross.trafficLight4, ref member);
 			//		break;
 			//}
-			response = cross.SkipOrNot(this.Destination-1, ref member);
+			response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
 			if (response != 0)
 			{
 				RemoveOwn();
 				if (inout == 1)
 					ChangeCoordInLine();
 				else
-				ChangeCoordOutLine();
+					ChangeCoordOutLine();
 				DrawOwn();
 			}
 		}
@@ -336,7 +336,7 @@ namespace FormsAppCrossroad
 			}
 			switch (Destination)
 			{
-				
+
 				case 1:
 					x += 2;
 					y += SpeedNow;
@@ -359,7 +359,7 @@ namespace FormsAppCrossroad
 		}
 		void ChangeCoordInLine()
 		{
-			var distance = cross.DistanceToSpecCar(this);
+			var distance = Crossroad.cross.DistanceToSpecCar(this);
 			int speed = 2;
 			if (distance < 1000)
 			{
@@ -399,7 +399,8 @@ namespace FormsAppCrossroad
 		}
 		public int AtTheLine
 		{
-			get {
+			get
+			{
 				switch (this.Destination)
 				{
 					case 1:
@@ -408,7 +409,7 @@ namespace FormsAppCrossroad
 						else
 							if (x == form.Width / 2 - Width / 2)
 							return 2;
-						else 
+						else
 							return 0;
 					case 2:
 						if (y <= form.Height / 2 - 105)
@@ -437,10 +438,11 @@ namespace FormsAppCrossroad
 				}
 				return 0;
 			}
-			set{
+			set
+			{
 				AtTheLine = value;
 			}
 		}
-		
-    }
+
+	}
 }

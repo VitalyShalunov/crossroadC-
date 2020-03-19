@@ -14,7 +14,7 @@ namespace FormsAppCrossroad
         public LightCar() : base(55, 80, 7)
         {
             //PictureBox pictureBox = new PictureBox();
-            
+
             //pathFile += random.Next(1, 7).ToString();
             //pathFile += ".png";
             //img = Image.FromFile(pathFile);
@@ -42,11 +42,7 @@ namespace FormsAppCrossroad
             }
             MemberOfTraffic own = this;
             Rotate(ref own);
-            //graphImg = Graphics.FromImage(img);
-            //graphImg = this.CreateGraphics();
-           // graph.DrawImage(img, form.Width / 2 - 145, 50, img.Width, img.Height);
-            //form.pictureBox1.Image = bmp;
-           
+
         }
     }
 }
