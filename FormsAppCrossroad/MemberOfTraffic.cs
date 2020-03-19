@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace FormsAppCrossroad
 {
-    abstract class MemberOfTraffic : Crossroad
+    abstract class MemberOfTraffic
     {
         public Crossroad form = new Crossroad();
         protected Random random = new Random();
@@ -26,29 +26,29 @@ namespace FormsAppCrossroad
             }
             if (value == 1)
             {
-                if (cross.countcar[0] + k > cross.countcar[3])
+                if (Crossroad.cross[0] + k > Crossroad.cross[3])
                 {
                     Destination = 4;
-                    cross.countcar[3]++;
+                    Crossroad.cross[3]++;
                 }
                 else
                 {
                     Destination = 1;
-                    cross.countcar[0]++;
+                    Crossroad.cross[0]++;
                 }
             }
             else
             {
 
-                if (cross.countcar[1] + k > cross.countcar[2])
+                if (Crossroad.cross[1] + k > Crossroad.cross[2])
                 {
                     Destination = 3;
-                    cross.countcar[2]++;
+                    Crossroad.cross[2]++;
                 }
                 else
                 {
                     Destination = 2;
-                    cross.countcar[1]++;
+                    Crossroad.cross[1]++;
                 }
             }
             //Destination = 3;
@@ -105,7 +105,9 @@ namespace FormsAppCrossroad
 
         public int Width;
         protected int length;
-        public int Length { get
+        public int Length
+        {
+            get
             {
                 return length;
             }
@@ -119,12 +121,12 @@ namespace FormsAppCrossroad
                 return speedMax;
             }
         }
-    protected int speedNow;
+        protected int speedNow;
         public int SpeedNow
         {
             get
             {
-                return speedNow ;
+                return speedNow;
             }
         }
         public int Destination; //направление 1..4
@@ -208,12 +210,12 @@ namespace FormsAppCrossroad
         {
             int response;
             MemberOfTraffic member = this;
-            response = cross.SkipOrNot(this.Destination - 1, ref member);
+            response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
             SpecCar existSpecCar = null;
 
             if (!(this is SpecCar))
             {
-                existSpecCar = cross.CheckExistSpecCar(this);
+                existSpecCar = Crossroad.cross.CheckExistSpecCar(this);
             }
 
             if (this is SpecCar || !(this is SpecCar) && (existSpecCar == null || existSpecCar.ChangeLine == 0))
@@ -225,7 +227,7 @@ namespace FormsAppCrossroad
                         this.speedNow = 0;
                         break;
                     case 1:
-                    case 2: 
+                    case 2:
                         if (this.SpeedNow == 0)
                         {
                             this.speedNow = this.MaxSpeed;
@@ -245,7 +247,7 @@ namespace FormsAppCrossroad
                             {
                                 this.speedNow = this.Next.SpeedNow;
                             }
-                          
+
                         }
                         if (DistanceToNext >= 30)
                         {
@@ -264,7 +266,7 @@ namespace FormsAppCrossroad
                     this.speedNow = 0;
                 }
             }
-        }   
+        }
 
         protected void Rotate(ref MemberOfTraffic car)
         {
@@ -290,18 +292,18 @@ namespace FormsAppCrossroad
             switch (this.Destination)
             {
                 case 1:
-                        graph.DrawImage(img, x, y - this.Length, img.Width, img.Height);
+                    Crossroad.graph.DrawImage(img, x, y - this.Length, img.Width, img.Height);
                     break;
                 case 2:
-                        graph.DrawImage(img, x, y, img.Width, img.Height);
+                    Crossroad.graph.DrawImage(img, x, y, img.Width, img.Height);
                     break;
                 case 3:
-                        graph.DrawImage(img, x - this.Length, y - this.Width, img.Width, img.Height);
-                   
+                    Crossroad.graph.DrawImage(img, x - this.Length, y - this.Width, img.Width, img.Height);
+
                     break;
                 case 4:
-                        graph.DrawImage(img, x - this.Width, this.y , img.Width, img.Height);
-                   
+                    Crossroad.graph.DrawImage(img, x - this.Width, this.y, img.Width, img.Height);
+
                     break;
                 default:
                     r = new Rectangle();
@@ -318,23 +320,23 @@ namespace FormsAppCrossroad
             switch (this.Destination)
             {
                 case 1:
-                    r = new Rectangle(x, y - Length -5, this.Width, this.Length+5);
+                    r = new Rectangle(x, y - Length - 5, this.Width, this.Length + 5);
                     break;
                 case 2:
                     r = new Rectangle(x, y, this.Length + 10, this.Width);
                     break;
                 case 3:
-                    r = new Rectangle(x - this.Length-10, y - this.Width, this.Length+10, this.Width);
+                    r = new Rectangle(x - this.Length - 10, y - this.Width, this.Length + 10, this.Width);
                     break;
                 case 4:
-                    r = new Rectangle(x - Width, y-5, this.Width, this.Length + 5);
+                    r = new Rectangle(x - Width, y - 5, this.Width, this.Length + 5);
                     break;
                 default:
                     r = new Rectangle();
                     break;
             }
 
-            graph.FillRectangle(brush, r);
+            Crossroad.graph.FillRectangle(brush, r);
             brush.Dispose();
         }
     }
