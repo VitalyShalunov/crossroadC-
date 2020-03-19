@@ -97,7 +97,6 @@
             this.Name = "ListRaiting";
             this.Text = "ListRaiting";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
-            this.Load += new System.EventHandler(this.ListRaiting_Load);
             ((System.ComponentModel.ISupportInitialize)(this.back)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

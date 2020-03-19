@@ -119,7 +119,7 @@ namespace FormsAppCrossroad
 
         private void UpdatePointOfCustomer()
         {
-           // using (var db = new MyDbContext())
+            try
             {
                 Customer Customer = Program.db.Customers.FirstOrDefault(customer => customer.Name == Program.menu.userName.Text);
                 if (Customer != null)
@@ -141,6 +141,10 @@ namespace FormsAppCrossroad
                     Program.db.Customers.Add(newCustomer);
                     Program.db.SaveChanges();
                 }
+
+            }
+            catch (Exception)
+            {
 
             }
         }

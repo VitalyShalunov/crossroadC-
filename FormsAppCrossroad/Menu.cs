@@ -114,19 +114,27 @@ namespace FormsAppCrossroad
 
         private void BestOfCustomer()
         {
-            // using (var db = new MyDbContext())
             {
-                Customer Customer = Program.db.Customers.FirstOrDefault(customer => customer.Name == Program.menu.userName.Text);
-                if (Customer != null)
+                try
                 {
-                    this.bestcustomer.Text = "Your best : " + Customer.Point;
-                }
-                else
-                {
-                    this.bestcustomer.Text = "";
-                }
+                    Customer Customer = Program.db.Customers.FirstOrDefault(customer => customer.Name == Program.menu.userName.Text);
+                    if (Customer != null)
+                    {
+                        this.bestcustomer.Text = "Your best : " + Customer.Point;
+                    }
+                    else
+                    {
+                        this.bestcustomer.Text = "";
+                    }
 
+                }
+                catch (Exception)
+                {
+
+
+                }
             }
+
         }
         private void Menu_Click(object sender, EventArgs e)
         {
