@@ -73,3 +73,21 @@ D:\ISPU\2 курс\лабораторные работы по ООП\crossroad\F
 D:\ISPU\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
 D:\ISPU\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
 D:\ISPU\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.ListRaiting.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe.config
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.exe
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\FormsAppCrossroad.pdb
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\EntityFramework.dll
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\EntityFramework.SqlServer.dll
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\EntityFramework.xml
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\bin\Debug\EntityFramework.SqlServer.xml
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csprojAssemblyReference.cache
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Cross.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Crossroad.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Instruction.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.ListRaiting.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Menu.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.Properties.Resources.resources
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.GenerateResource.cache
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.csproj.CopyComplete
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.exe
+D:\Рабочий стол\УЧЁБА\ИГЭУ\2 курс\лабораторные работы по ООП\crossroad\FormsAppCrossroad\obj\Debug\FormsAppCrossroad.pdb
