@@ -86,8 +86,8 @@ namespace FormsAppCrossroad
 
 			Crossroad.changeLine += new Crossroad.ChangeLine(ChangePropertyAtTheSpecCar);
 		}
-		public int ChangeLine { get; set; }
-		public int CheckSetLink { get; set; }
+		public int ChangeLine { get; private set; }
+		public int CheckSetLink { get; private set; }
 		void SetSpeed()
 		{
 			if (this.Next != null && this.Next.SpeedNow <= SpeedNow && this.DistanceToNext < 30)
@@ -153,7 +153,6 @@ namespace FormsAppCrossroad
 						checkCoord = CheckCoord();
 						if (answer == 1)
 						{
-							//CheckSetLink = 1;
 							if (CheckSetLink == 1)
 							{
 								SpecCar car = this;
@@ -163,32 +162,16 @@ namespace FormsAppCrossroad
 								if (res == 0)
 								{
 									this.Next = Crossroad.cross.CheckLast(ref car);
-									//this.Next = cross.CheckLast(ref car);
-									//if (DistanceToNext>40)
-									//{
-									//	this.Next = cross.CheckLast(ref car);
-									//}
 								}
-								//res = cross.SetLinkIfSpecCarChangeLines(ref car, 1);
+								
 							}
 							SetSpeed();
-							//if (DistanceToNext < 25)
-							//	SpeedNow = Next.SpeedNow;
-							//else SpeedNow = MaxSpeed;
+						
 							RideOwn(1);
-							//RemoveOwn();
-							//ChangeCoordInLine();
-							//DrawOwn();
+							
 						}
 						else
 						{
-							//if (this.Next != null)
-							//	RideOwn(1);
-							//if (this.Next != null && this.Next.SpeedNow < SpeedNow && this.DistanceToNext < 30)
-							//	if (DistanceToNext < 15)
-							//	{
-							//		SpeedNow = Next.SpeedNow - 2;
-							//	}
 							base.Ride();
 						}
 
@@ -200,7 +183,6 @@ namespace FormsAppCrossroad
 						checkCoord = CheckCoord();
 						if (answer == 2000 && checkCoord != 1)
 						{
-							//CheckSetLink = 1;
 							ChangeLine = 2;
 						}
 						else
@@ -228,9 +210,6 @@ namespace FormsAppCrossroad
 						}
 
 						RideOwn(0);
-						//RemoveOwn();
-						//ChangeCoordOutLine();
-						//DrawOwn();
 					}
 					else
 					{
@@ -247,13 +226,7 @@ namespace FormsAppCrossroad
 						ChangeLine = 0;
 					}
 					break;
-				default:
-
-					break;
-
 			}
-
-
 		}
 
 		private void ChangePropertyAtTheSpecCar()
@@ -266,21 +239,6 @@ namespace FormsAppCrossroad
 		{
 			int response = 0;
 			MemberOfTraffic member = this;
-			//switch (this.Destination)
-			//{
-			//	case 1:
-			//		response = cross.SkipOrNot(ref cross.trafficLight1, ref member);
-			//		break;
-			//	case 2:
-			//		response = cross.SkipOrNot(ref cross.trafficLight2, ref member);
-			//		break;
-			//	case 3:
-			//		response = cross.SkipOrNot(ref cross.trafficLight3, ref member);
-			//		break;
-			//	case 4:
-			//		response = cross.SkipOrNot(ref cross.trafficLight4, ref member);
-			//		break;
-			//}
 			response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
 			if (response != 0)
 			{

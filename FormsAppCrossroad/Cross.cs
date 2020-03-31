@@ -1331,20 +1331,20 @@ namespace FormsAppCrossroad
         /// <summary>
         /// изменить свойства спец.транспорта для перемещения в полосу
         /// </summary>
-        public void ChangePropertyAtTheSpecCar()
-        {
-            foreach (var specCar in memberOfTraffics)
-            {
-                if (specCar is SpecCar)
-                {
-                    SpecCar spec = (SpecCar)specCar;
-                    {
-                        spec.ChangeLine = 1;
-                        spec.CheckSetLink = 1;
-                    }
-                }
-            }
-        }
+        //public void ChangePropertyAtTheSpecCar()
+        //{
+        //    foreach (var specCar in memberOfTraffics)
+        //    {
+        //        if (specCar is SpecCar)
+        //        {
+        //            SpecCar spec = (SpecCar)specCar;
+        //            {
+        //                spec.ChangeLine = 1;
+        //                spec.CheckSetLink = 1;
+        //            }
+        //        }
+        //    }
+        //}
 
         private void InitializeComponent()
         {

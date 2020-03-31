@@ -51,7 +51,6 @@ namespace FormsAppCrossroad
                     Crossroad.cross[1]++;
                 }
             }
-            //Destination = 3;
             int color1 = random.Next(0, 256);
             int color2 = random.Next(0, 256);
             int color3 = random.Next(0, 256);
@@ -101,9 +100,7 @@ namespace FormsAppCrossroad
                 return y;
             }
         }
-        //координаты 
-
-        public int Width;
+        public int Width { get; private set; }
         protected int length;
         public int Length
         {
@@ -111,7 +108,7 @@ namespace FormsAppCrossroad
             {
                 return length;
             }
-        } //ширина и длина
+        } 
 
         protected int speedMax;
         public int MaxSpeed
@@ -129,7 +126,7 @@ namespace FormsAppCrossroad
                 return speedNow;
             }
         }
-        public int Destination; //направление 1..4
+        public int Destination { get; private set; } //направление 1..4
         protected Color color;
         private MemberOfTraffic next;
         protected Image img;
@@ -188,7 +185,7 @@ namespace FormsAppCrossroad
             }
         }
 
-        void ChangeCoord()
+        private void ChangeCoord()
         {
             switch (this.Destination)
             {
@@ -253,9 +250,11 @@ namespace FormsAppCrossroad
                         {
                             this.speedNow = this.MaxSpeed;
                         }
+
                         ChangeCoord();
+
                         if ((this.SpeedNow == 0 && speed != 0) || this.SpeedNow != 0)
-                            this.DrawOwn(); //нарисовать
+                            this.DrawOwn(); 
                         break;
                 }
             }
