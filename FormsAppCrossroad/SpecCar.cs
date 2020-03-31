@@ -151,9 +151,9 @@ namespace FormsAppCrossroad
 						checkCoord = CheckCoord();
 						if (answer == 1)
 						{
-							Cross.cross.CountSpecCarAtTheLine1++;
 							if (CheckSetLink == 1)
 							{
+								Cross.cross.CountSpecCarAtTheLine1++;
 								SpecCar car = this;
 
 								int res = Crossroad.cross.SetLinkIfSpecCarChangeLines(ref car, 1);
@@ -236,7 +236,7 @@ namespace FormsAppCrossroad
 		{
 			this.ChangeLine = 1;
 			this.CheckSetLink = 1;
-			Cross.cross.CountSpecCarAtTheLine1++;
+			//Cross.cross.CountSpecCarAtTheLine1++;
 			trigger = 1;
 		}
 
