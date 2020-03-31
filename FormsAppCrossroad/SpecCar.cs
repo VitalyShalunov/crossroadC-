@@ -52,7 +52,7 @@ namespace FormsAppCrossroad
 					break;
 			}
 			color = Color.FromArgb(255, color1, color2, color3);
-			//Destination = rnd.Next(1, 5);
+			
 			switch (Destination) //начальные кординаты в зависимости от направления движения
 			{
 				case 1:
@@ -100,13 +100,11 @@ namespace FormsAppCrossroad
 				{
 					if (DistanceToNext < 20 && Next.SpeedNow != 0 && SpeedNow != 0)
 					{
-						if (this.DistanceToNext <= 20 && this.SpeedNow > 5)
+						if (this.DistanceToNext <= 20 && this.SpeedNow >= 5)
 						{
-
 							this.speedNow = this.Next.SpeedNow - 2;
-							//speedDown = 0;
 						}
-						if (this.DistanceToNext >= 20)
+						if (this.DistanceToNext >= 20 )
 						{
 							this.speedNow = this.Next.SpeedNow;
 						}
@@ -114,7 +112,6 @@ namespace FormsAppCrossroad
 						{
 							this.speedNow = this.MaxSpeed;
 						}
-						//SpeedNow = Next.SpeedNow;  // - 2;
 					}
 					else
 					{
@@ -140,14 +137,14 @@ namespace FormsAppCrossroad
 					checkCoord = CheckCoord();
 					if (AtTheLine == 2 && checkCoord == 1)
 					{
-						ChangeLine = 1;
+						//ChangeLine = 1;
+						ChangePropertyAtTheSpecCar();
 					}
 					base.Ride();
 					break;
 				case 1:
 					if (AtTheLine != 1)
 					{
-
 						int answer = 0;
 						answer = Crossroad.cross.CanChangeLine(this);
 						checkCoord = CheckCoord();
@@ -168,7 +165,6 @@ namespace FormsAppCrossroad
 							SetSpeed();
 						
 							RideOwn(1);
-							
 						}
 						else
 						{
@@ -316,11 +312,6 @@ namespace FormsAppCrossroad
 					speed += 4;
 				}
 			}
-
-			//if (this.DistanceToNext < 30)
-			//{
-			//	SpeedNow = Next.SpeedNow;
-			//}
 
 			switch (Destination)
 			{

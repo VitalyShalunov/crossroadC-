@@ -530,7 +530,6 @@ namespace FormsAppCrossroad
                                     click = 0;
                                     //obj1.Ride();
                                     obj2.Ride();
-                                    del = 1;
                                     timerGame.Stop();
                                     form.Close();
                                     break;

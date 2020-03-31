@@ -15,7 +15,7 @@ namespace FormsAppCrossroad
     {
         protected static int check { get; set; }
         static int count = 0;
-        protected int del { get; set; }
+       
         protected int click { get; set; }
         protected static int total { get; set; }
         protected int c = 1;
@@ -223,7 +223,6 @@ namespace FormsAppCrossroad
         private void Crossroad_Load(object sender, EventArgs e)
         {
             check = 1;
-            del = 0;
             click = 0;
             total = 0;
             count = 0;
