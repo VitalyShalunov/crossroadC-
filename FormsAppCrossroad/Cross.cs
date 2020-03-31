@@ -13,7 +13,6 @@ namespace FormsAppCrossroad
             set { countcar[index] = value; }
         }
 
-        //private readonly T[] _array;
         private int[] countcar = new int[4]; //кол-во машин в определенном направлении
         protected Crossroad form = new Crossroad();
         private int i;
@@ -267,47 +266,39 @@ namespace FormsAppCrossroad
             switch (dir)
             {
                 case 1:
-                    if ((countStop1 == 2 || countStop1 == 3) && (lastNow == last))
+                    if ((countStop1>=2) && (lastNow == last))
                     {
                         timerGame.Stop();
-                        //form.reason.Text = "Пробка сверху направлении";
                         reason = 1;
                         check = 0;
                         click = 0;
-                        del = 1;
                     }
                     break;
                 case 2:
-                    if ((countStop2 == 4 || countStop2 == 5 || countStop2 == 6) && (lastNow == last))
+                    if ((countStop2 >=4) && (lastNow == last))
                     {
                         timerGame.Stop();
-                        //form.reason.Text = "Пробка сверхсправау направлении";
                         reason = 2;
                         check = 0;
                         click = 0;
-                        del = 1;
                     }
                     break;
                 case 3:
-                    if ((countStop3 == 4 || countStop3 == 5 || countStop3 == 6) && (lastNow == last))
+                    if ((countStop3 >=4) && (lastNow == last))
                     {
                         timerGame.Stop();
-                        //form.reason.Text = "Пробка слева направлении";
                         reason = 3;
                         check = 0;
                         click = 0;
-                        del = 1;
                     }
                     break;
                 case 4:
-                    if ((countStop4 == 2 || countStop4 == 3) && (lastNow == last))
+                    if ((countStop4 >=2) && (lastNow == last))
                     {
                         timerGame.Stop();
-                        // form.reason.Text = "Пробка снизу направлении";
                         reason = 4;
                         check = 0;
                         click = 0;
-                        del = 1;
                     }
                     break;
             }
@@ -398,22 +389,22 @@ namespace FormsAppCrossroad
                 }
                 if (check == 1)
                 {
-                    if (countStop1 == 2 || countStop1 == 3)
+                    if (countStop1 >=2)
                     {
                         timer1.Stop();
                         timer1.Start();
                     }
-                    if (countStop2 == 4 || countStop2 == 5)
+                    if (countStop2 >= 4)
                     {
                         timer2.Stop();
                         timer2.Start();
                     }
-                    if (countStop3 == 4 || countStop3 == 5)
+                    if (countStop3 >= 4)
                     {
                         timer3.Stop();
                         timer3.Start();
                     }
-                    if (countStop4 == 2 || countStop4 == 3)
+                    if (countStop4 >= 2)
                     {
                         timer4.Stop();
                         timer4.Start();

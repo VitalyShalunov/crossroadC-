@@ -25,6 +25,9 @@ namespace FormsAppCrossroad
         public static event ActionTrafficLight ChangeTrafficLight14;
         public static event ActionTrafficLight ChangeTrafficLight23;
 
+        public delegate void ChangeLine();
+        public static event ChangeLine changeLine;
+
         protected static Graphics g;
         public static Graphics graph;
         private static Graphics graphforTL;
@@ -40,28 +43,28 @@ namespace FormsAppCrossroad
             }
         }
         public static Cross cross;
-        protected MemberOfTraffic carStop1, carStop2, carStop3, carStop4;
+        protected static MemberOfTraffic carStop1, carStop2, carStop3, carStop4;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(1, cross.carStop1);
+            cross.TimerTrafficJam(1, carStop1);
             timer1.Stop();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(2, cross.carStop2);
+            cross.TimerTrafficJam(2, carStop2);
             timer2.Stop();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(3, cross.carStop3);
+            cross.TimerTrafficJam(3, carStop3);
             timer3.Stop();
         }
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(4, cross.carStop4);
+            cross.TimerTrafficJam(4, carStop4);
             timer4.Stop();
         }
 
@@ -190,7 +193,15 @@ namespace FormsAppCrossroad
             }
             if (e.KeyCode == Keys.Space)
             {
-                cross.ChangePropertyAtTheSpecCar();
+                try
+                {
+                    changeLine();
+                }
+                catch (Exception)
+                {
+                }
+               
+                //cross.ChangePropertyAtTheSpecCar();
             }
             if (e.KeyCode == Keys.Escape)
             {

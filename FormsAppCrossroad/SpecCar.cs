@@ -13,10 +13,6 @@ namespace FormsAppCrossroad
 		private string pathFile = "img/spec_car";
 		public SpecCar() : base(55, 80, 8)
 		{
-			//pathFile += random.Next(1, 4).ToString();
-			//pathFile += ".png";
-			//img = Image.FromFile(pathFile);
-			//bmp = new Bitmap(img);
 			switch (random.Next(1, 4))
 			{
 				case 1:
@@ -83,26 +79,12 @@ namespace FormsAppCrossroad
 					speedMax = 4;
 					speedNow = MaxSpeed;
 					break;
-					//case 1:
-					//	x = form.Size.Width / 2 - 115;
-					//	y = 0;
-					//	break;
-					//case 2:
-					//	x = form.Size.Width;
-					//	y = form.Size.Height / 2 - 105;
-					//	break;
-					//case 3:
-					//	x = 0;
-					//	y = form.Size.Height / 2 + 115;
-					//	break;
-					//case 4:
-					//	x = form.Size.Width / 2 + 105;
-					//	y = form.Size.Height;
-					//	break;
 			}
 			//MaxSpeed += 4;
 			ChangeLine = 0;
 			CheckSetLink = 1;
+
+			Crossroad.changeLine += new Crossroad.ChangeLine(ChangePropertyAtTheSpecCar);
 		}
 		public int ChangeLine { get; set; }
 		public int CheckSetLink { get; set; }
@@ -273,6 +255,13 @@ namespace FormsAppCrossroad
 
 
 		}
+
+		private void ChangePropertyAtTheSpecCar()
+		{
+			this.ChangeLine = 1;
+			this.CheckSetLink = 1;
+		}
+
 		void RideOwn(int inout)
 		{
 			int response = 0;
