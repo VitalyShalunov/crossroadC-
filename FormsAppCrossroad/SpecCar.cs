@@ -9,6 +9,7 @@ namespace FormsAppCrossroad
 {
 	class SpecCar : MemberOfTraffic
 	{
+		private int trigger = 0;
 		private Random rnd = new Random();
 		private string pathFile = "img/spec_car";
 		public SpecCar() : base(55, 80, 8)
@@ -174,6 +175,12 @@ namespace FormsAppCrossroad
 					}
 					if (AtTheLine == 1)
 					{
+						if (trigger == 1)
+						{
+							trigger = 0;
+							Cross.cross.CountSpecCarAtTheLine1--;
+						}
+
 						speedNow = MaxSpeed;
 						var answer = Crossroad.cross.DistanceToSpecCar(this);
 						checkCoord = CheckCoord();
@@ -229,6 +236,9 @@ namespace FormsAppCrossroad
 		{
 			this.ChangeLine = 1;
 			this.CheckSetLink = 1;
+			Cross.cross.CountSpecCarAtTheLine1++;
+			trigger = 1;
+
 		}
 
 		void RideOwn(int inout)

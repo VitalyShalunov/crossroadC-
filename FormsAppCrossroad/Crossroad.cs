@@ -29,7 +29,19 @@ namespace FormsAppCrossroad
         public static event ChangeLine changeLine;
 
         protected static Graphics g;
-        public static Graphics graph;
+        private static Graphics graphCross;
+        public static Graphics graph
+        {
+            get
+            {
+                return graphCross;
+            }
+            private set
+            {
+                graphCross = value;
+            }
+        }
+
         private static Graphics graphforTL;
         public static Graphics graphTL
         {
@@ -90,6 +102,9 @@ namespace FormsAppCrossroad
             timer3.Stop();
             timer4.Stop();
             timerGame.Stop();
+            //cross = null;
+            //GC.Collect();
+            //GC.WaitForPendingFinalizers();
 
             Program.menu.totalPoint = total;
             switch (reason)

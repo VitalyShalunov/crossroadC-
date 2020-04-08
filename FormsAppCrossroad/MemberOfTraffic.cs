@@ -210,7 +210,7 @@ namespace FormsAppCrossroad
             response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
             SpecCar existSpecCar = null;
 
-            if (!(this is SpecCar))
+            if (!(this is SpecCar) && Cross.cross.CountSpecCarAtTheLine1 > 0)
             {
                 existSpecCar = Crossroad.cross.CheckExistSpecCar(this);
             }

@@ -13,6 +13,19 @@ namespace FormsAppCrossroad
             set { countcar[index] = value; }
         }
 
+        private int countSpecCarAtTheLine1;
+        public int CountSpecCarAtTheLine1
+        {
+            get
+            {
+                return countSpecCarAtTheLine1;
+            }
+            set
+            {
+                countSpecCarAtTheLine1 = value;
+            }
+        }
+
         private int[] countcar = new int[4]; //кол-во машин в определенном направлении
         protected Crossroad form = new Crossroad();
         private int i;
