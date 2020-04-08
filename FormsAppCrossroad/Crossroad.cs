@@ -16,7 +16,7 @@ namespace FormsAppCrossroad
         protected static int check { get; set; }
         static int count = 0;
        
-        protected int click { get; set; }
+       // protected int click { get; set; }
         protected static int total { get; set; }
         protected int c = 1;
         protected static int reason;
@@ -58,25 +58,29 @@ namespace FormsAppCrossroad
         protected static MemberOfTraffic carStop1, carStop2, carStop3, carStop4;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(1, carStop1);
+            if (cross != null)
+                cross.TimerTrafficJam(1, carStop1);
             timer1.Stop();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(2, carStop2);
+            if (cross != null)
+                cross.TimerTrafficJam(2, carStop2);
             timer2.Stop();
         }
 
         private void timer3_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(3, carStop3);
+            if (cross != null)
+                cross.TimerTrafficJam(3, carStop3);
             timer3.Stop();
         }
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(4, carStop4);
+            if(cross!=null)
+                cross.TimerTrafficJam(4, carStop4);
             timer4.Stop();
         }
 
@@ -102,9 +106,9 @@ namespace FormsAppCrossroad
             timer3.Stop();
             timer4.Stop();
             timerGame.Stop();
-            //cross = null;
-            //GC.Collect();
-            //GC.WaitForPendingFinalizers();
+            cross = null;
+            GC.Collect();
+            GC.WaitForPendingFinalizers();
 
             Program.menu.totalPoint = total;
             switch (reason)
@@ -238,7 +242,7 @@ namespace FormsAppCrossroad
         private void Crossroad_Load(object sender, EventArgs e)
         {
             check = 1;
-            click = 0;
+            //click = 0;
             total = 0;
             count = 0;
         }

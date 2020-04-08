@@ -52,7 +52,6 @@ namespace FormsAppCrossroad
            
             Paint();
 
-           
         }
         /// <summary>
         /// Отрисовка перекрестка
@@ -284,7 +283,7 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 1;
                         check = 0;
-                        click = 0;
+                        //click = 0;
                     }
                     break;
                 case 2:
@@ -293,7 +292,7 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 2;
                         check = 0;
-                        click = 0;
+                        //click = 0;
                     }
                     break;
                 case 3:
@@ -302,7 +301,7 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 3;
                         check = 0;
-                        click = 0;
+                        //click = 0;
                     }
                     break;
                 case 4:
@@ -311,7 +310,7 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 4;
                         check = 0;
-                        click = 0;
+                       // click = 0;
                     }
                     break;
             }
@@ -540,11 +539,11 @@ namespace FormsAppCrossroad
                                      reason = 5;
                                      check = 0;
 
-                                    click = 0;
+                                    //click = 0;
                                     //obj1.Ride();
-                                    obj2.Ride();
-                                    timerGame.Stop();
-                                    form.Close();
+                                    //obj2.Ride();
+                                    //timerGame.Stop();
+                                    //form.Close();
                                     break;
                                 }
                             }
