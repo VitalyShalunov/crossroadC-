@@ -29,7 +29,18 @@ namespace FormsAppCrossroad
         public static event ChangeLine changeLine;
 
         protected static Graphics g;
-        public static Graphics graph;
+        private static Graphics graphCross;
+        public static Graphics graph
+        {
+            get
+            {
+                return graphCross;
+            }
+            private set
+            {
+                graphCross = value;
+            }
+        }
         private static Graphics graphforTL;
         public static Graphics graphTL
         {
@@ -46,7 +57,7 @@ namespace FormsAppCrossroad
         protected static MemberOfTraffic carStop1, carStop2, carStop3, carStop4;
         private void timer1_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(1, carStop1);
+            //cross.TimerTrafficJam(1, carStop1);
             timer1.Stop();
         }
 
@@ -64,7 +75,7 @@ namespace FormsAppCrossroad
 
         private void timer4_Tick(object sender, EventArgs e)
         {
-            cross.TimerTrafficJam(4, carStop4);
+            //cross.TimerTrafficJam(4, carStop4);
             timer4.Stop();
         }
 
@@ -72,6 +83,7 @@ namespace FormsAppCrossroad
         {
             if (count == 0)
             {
+                cross = new Cross();
                 cross.PaintTraffic();
                 count++;
             }
@@ -159,7 +171,7 @@ namespace FormsAppCrossroad
             graph = Graphics.FromHwnd(pictureBox1.Handle);
             pictureBox1.Width = this.Width;
             pictureBox1.Height = this.Height;
-            cross = new Cross();
+           
            
             timerGame.Start();
         }

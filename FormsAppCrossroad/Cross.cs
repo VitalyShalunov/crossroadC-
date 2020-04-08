@@ -60,37 +60,37 @@ namespace FormsAppCrossroad
         {
             Brush brush = new SolidBrush(Color.DimGray);
             Rectangle r = new Rectangle(0, 0, this.Width, this.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
             brush = new SolidBrush(Color.White);
             r = new Rectangle(0, form.Height / 2 - 125, form.Width / 2 - 125, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 - 125, form.Width - form.Width / 2 - 110, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(0, this.Height / 2 + 125, this.Width / 2 - 125, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 + 125, form.Width - form.Width / 2 - 110, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
 
             r = new Rectangle(form.Width / 2 - 140, 0, 15, form.Height / 2 - 110);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, 0, 15, form.Height / 2 - 110);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 - 140, form.Height / 2 + 125, 15, form.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 + 125, 15, form.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
 
             brush = new SolidBrush(Color.DarkGreen);
             r = new Rectangle(0, 0, form.Width / 2 - 140, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 125, 0, form.Width - form.Width / 2 + 110, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(0, form.Height / 2 + 140, form.Width / 2 - 140, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 125, form.Height / 2 + 140, form.Width - form.Width / 2 + 110, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
            
         }
@@ -535,9 +535,9 @@ namespace FormsAppCrossroad
                             {
                                 if (!(OBJ1.Top > OBJ2.Bottom || OBJ1.Bottom < OBJ2.Top || OBJ1.Right < OBJ2.Left || OBJ1.Left > OBJ2.Right))
                                 {
-                                     MemberOfTraffic c = obj2.Next;
-                                     reason = 5;
-                                     check = 0;
+                                    MemberOfTraffic c = obj2.Next;
+                                    reason = 5;
+                                    check = 0;
 
                                     click = 0;
                                     //obj1.Ride();
@@ -872,7 +872,7 @@ namespace FormsAppCrossroad
                         //memberOfTraffics.Add(new Bus());
                         if (random.Next(1, 5) == 1)
                         {
-                            if (k < 4)
+                            if (k < 1)
                                 memberOfTraffics.Add(new SpecCar());
                             //else
                             //    memberOfTraffics.Add(new LightCar());

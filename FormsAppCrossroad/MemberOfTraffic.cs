@@ -24,33 +24,33 @@ namespace FormsAppCrossroad
             {
                 value = rnd.Next(1, 15);
             }
-            if (value == 1)
+           // if (value == 1)
             {
-                if (Crossroad.cross[0] + k > Crossroad.cross[3])
+                //if (Crossroad.cross[0] + k > Crossroad.cross[3])
                 {
                     Destination = 4;
                     Crossroad.cross[3]++;
                 }
-                else
-                {
-                    Destination = 1;
-                    Crossroad.cross[0]++;
-                }
+                //else
+                //{
+                //    Destination = 1;
+                //    Crossroad.cross[0]++;
+                //}
             }
-            else
-            {
+            //else
+            //{
 
-                if (Crossroad.cross[1] + k > Crossroad.cross[2])
-                {
-                    Destination = 3;
-                    Crossroad.cross[2]++;
-                }
-                else
-                {
-                    Destination = 2;
-                    Crossroad.cross[1]++;
-                }
-            }
+            //    if (Crossroad.cross[1] + k > Crossroad.cross[2])
+            //    {
+            //        Destination = 3;
+            //        Crossroad.cross[2]++;
+            //    }
+            //    else
+            //    {
+            //        Destination = 2;
+            //        Crossroad.cross[1]++;
+            //    }
+            //}
             int color1 = random.Next(0, 256);
             int color2 = random.Next(0, 256);
             int color3 = random.Next(0, 256);
@@ -338,6 +338,7 @@ namespace FormsAppCrossroad
             Crossroad.graph.FillRectangle(brush, r);
             brush.Dispose();
         }
+
     }
 }
 
