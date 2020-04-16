@@ -94,5 +94,13 @@ namespace FormsAppCrossroad
 			Crossroad.graphTL.FillEllipse(brush, xPos - radius, yPos - radius, 2 * radius, 2 * radius);
 			brush.Dispose();
 		}
+
+		internal TrafficLight TrafficLight
+		{
+			get => default;
+			set
+			{
+			}
+		}
 	}
 }

@@ -9,6 +9,8 @@ namespace FormsAppCrossroad
 {
     abstract class MemberOfTraffic
     {
+        public delegate int AutoEvent(int index, ref MemberOfTraffic car);
+        public static event AutoEvent MoveEvent;
         public Crossroad form = new Crossroad();
         protected Random random = new Random();
         private Random rnd = new Random();
@@ -207,7 +209,8 @@ namespace FormsAppCrossroad
         {
             int response;
             MemberOfTraffic member = this;
-            response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
+            //response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
+            response = MoveEvent(this.Destination - 1, ref member);
             SpecCar existSpecCar = null;
 
             if (!(this is SpecCar) && Cross.cross.CountSpecCarAtTheLine1 > 0)
@@ -286,7 +289,7 @@ namespace FormsAppCrossroad
         }
         public void DrawOwn()
         {
-            Rectangle r;
+            //Rectangle r;
             SolidBrush brush = new SolidBrush(color);
             switch (this.Destination)
             {
@@ -298,15 +301,13 @@ namespace FormsAppCrossroad
                     break;
                 case 3:
                     Crossroad.graph.DrawImage(img, x - this.Length, y - this.Width, img.Width, img.Height);
-
                     break;
                 case 4:
                     Crossroad.graph.DrawImage(img, x - this.Width, this.y, img.Width, img.Height);
-
                     break;
-                default:
-                    r = new Rectangle();
-                    break;
+                    //default:
+                    //    r = new Rectangle();
+                    //    break;
             }
             //r = new Rectangle(x, y - Length, car.Width, car.Length);
             brush.Dispose();
@@ -337,6 +338,14 @@ namespace FormsAppCrossroad
 
             Crossroad.graph.FillRectangle(brush, r);
             brush.Dispose();
+        }
+
+        internal Cross Cross
+        {
+            get => default;
+            set
+            {
+            }
         }
     }
 }

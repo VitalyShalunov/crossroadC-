@@ -246,6 +246,7 @@ namespace FormsAppCrossroad
 			int response = 0;
 			MemberOfTraffic member = this;
 			response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
+			//response = MemberOfTraffic.MoveEvent(this.Destination - 1, ref member);
 			if (response != 0)
 			{
 				RemoveOwn();

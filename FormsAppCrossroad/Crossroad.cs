@@ -88,7 +88,8 @@ namespace FormsAppCrossroad
         {
             if (count == 0)
             {
-                cross.PaintTraffic();
+                cross = new Cross();
+                //cross.PaintTraffic();
                 count++;
             }
             if (check == 1)
@@ -178,7 +179,7 @@ namespace FormsAppCrossroad
             graph = Graphics.FromHwnd(pictureBox1.Handle);
             pictureBox1.Width = this.Width;
             pictureBox1.Height = this.Height;
-            cross = new Cross();
+            
            
             timerGame.Start();
         }

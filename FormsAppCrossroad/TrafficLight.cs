@@ -56,7 +56,7 @@ namespace FormsAppCrossroad
                         break;
                 }
             }
-           // drawOwn();
+            //drawOwn();
         }
         public void drawOwn()
         {
@@ -121,6 +121,14 @@ namespace FormsAppCrossroad
                     circle.drawCircle();
                 }
                 this.color = 1;
+            }
+        }
+
+        internal Cross Cross
+        {
+            get => default;
+            set
+            {
             }
         }
     }

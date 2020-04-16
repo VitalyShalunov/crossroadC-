@@ -7,6 +7,7 @@ namespace FormsAppCrossroad
 {
     class Cross : Crossroad
     {
+       
         public int this [int index]
         {
             get { return countcar[index]; }
@@ -49,9 +50,9 @@ namespace FormsAppCrossroad
             {
                 trafficLights.Add(new TrafficLight(i));
             }
-           
+            MemberOfTraffic.MoveEvent += new MemberOfTraffic.AutoEvent(SkipOrNot);
             Paint();
-
+            PaintTraffic();
         }
         /// <summary>
         /// Отрисовка перекрестка
@@ -60,37 +61,37 @@ namespace FormsAppCrossroad
         {
             Brush brush = new SolidBrush(Color.DimGray);
             Rectangle r = new Rectangle(0, 0, this.Width, this.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
             brush = new SolidBrush(Color.White);
             r = new Rectangle(0, form.Height / 2 - 125, form.Width / 2 - 125, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 - 125, form.Width - form.Width / 2 - 110, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(0, this.Height / 2 + 125, this.Width / 2 - 125, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 + 125, form.Width - form.Width / 2 - 110, 15);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
 
             r = new Rectangle(form.Width / 2 - 140, 0, 15, form.Height / 2 - 110);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, 0, 15, form.Height / 2 - 110);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 - 140, form.Height / 2 + 125, 15, form.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 110, form.Height / 2 + 125, 15, form.Height);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
 
             brush = new SolidBrush(Color.DarkGreen);
             r = new Rectangle(0, 0, form.Width / 2 - 140, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 125, 0, form.Width - form.Width / 2 + 110, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(0, form.Height / 2 + 140, form.Width / 2 - 140, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             r = new Rectangle(form.Width / 2 + 125, form.Height / 2 + 140, form.Width - form.Width / 2 + 110, form.Height / 2 - 125);
-            g.FillRectangle(brush, r);
+            graph.FillRectangle(brush, r);
             brush.Dispose();
            
         }
@@ -283,7 +284,6 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 1;
                         check = 0;
-                        //click = 0;
                     }
                     break;
                 case 2:
@@ -292,7 +292,6 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 2;
                         check = 0;
-                        //click = 0;
                     }
                     break;
                 case 3:
@@ -301,7 +300,6 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 3;
                         check = 0;
-                        //click = 0;
                     }
                     break;
                 case 4:
@@ -310,12 +308,10 @@ namespace FormsAppCrossroad
                         timerGame.Stop();
                         reason = 4;
                         check = 0;
-                       // click = 0;
                     }
                     break;
             }
         }
-        //TODO: подумать над оптимизацией двух функций
         /// <summary>
         /// Проверка есть ли пробка и запуск таймера
         /// </summary>
@@ -906,37 +902,6 @@ namespace FormsAppCrossroad
                 } while (check == 0);
             }
         }
-        /// <summary>
-        /// Проверка, есть ли авто на перекрестке
-        /// </summary>
-        //public int CheckCarOnTheCross(MemberOfTraffic car)
-        //{
-        //    switch (car.Destination)
-        //    {
-        //        case 1:
-        //            if (car.y - car.Length > form.Height / 2 - 110 && car.y - car.Length < form.Height / 2 + 110)
-        //                return 1;
-        //            else
-        //                return 0;
-        //        case 4:
-        //            if (car.y + car.Length > form.Height / 2 - 110 && car.y + car.Length < form.Height / 2 + 110)
-        //                return 1;
-        //            else
-        //                return 0;
-        //        case 2:
-        //            if (car.x + car.Length > form.Width / 2 - 110 && car.x + car.Length < form.Width / 2 + 110)
-        //                return 1;
-        //            else
-        //                return 0;
-        //        case 3:
-        //            if (car.x - car.Length > form.Width / 2 - 110 && car.x - car.Length < form.Width / 2 + 110)
-        //                return 1;
-        //            else
-        //                return 0;
-        //        default:
-        //            return 0;
-        //    }
-        //}
 
         /// <summary>
         /// Проверка, будет ли авария при перестроении спец.транспорта
@@ -1339,50 +1304,32 @@ namespace FormsAppCrossroad
             return 2;
         }
 
-        /// <summary>
-        /// изменить свойства спец.транспорта для перемещения в полосу
-        /// </summary>
-        //public void ChangePropertyAtTheSpecCar()
+        //private void InitializeComponent()
         //{
-        //    foreach (var specCar in memberOfTraffics)
-        //    {
-        //        if (specCar is SpecCar)
-        //        {
-        //            SpecCar spec = (SpecCar)specCar;
-        //            {
-        //                spec.ChangeLine = 1;
-        //                spec.CheckSetLink = 1;
-        //            }
-        //        }
-        //    }
+        //    ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+        //    this.SuspendLayout();
+        //    // 
+        //    // timerGame
+        //    // 
+        //    this.timerGame.Enabled = true;
+        //    // 
+        //    // pictureBox1
+        //    // 
+        //    this.pictureBox1.Size = new System.Drawing.Size(1540, 985);
+        //    // 
+        //    // reason
+        //    // 
+        //   // this.reason.Location = new System.Drawing.Point(22, 92);
+        //    // 
+        //    // Cross
+        //    // 
+        //    this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+        //    this.ClientSize = new System.Drawing.Size(1522, 938);
+        //    this.Location = new System.Drawing.Point(0, 0);
+        //    this.Name = "Cross";
+        //    ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+        //    this.ResumeLayout(false);
+
         //}
-
-        private void InitializeComponent()
-        {
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            this.SuspendLayout();
-            // 
-            // timerGame
-            // 
-            this.timerGame.Enabled = true;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Size = new System.Drawing.Size(1540, 985);
-            // 
-            // reason
-            // 
-           // this.reason.Location = new System.Drawing.Point(22, 92);
-            // 
-            // Cross
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
-            this.ClientSize = new System.Drawing.Size(1522, 938);
-            this.Location = new System.Drawing.Point(0, 0);
-            this.Name = "Cross";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            this.ResumeLayout(false);
-
-        }
     }
 }

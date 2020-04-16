@@ -21,8 +21,7 @@ namespace FormsAppCrossroad
             NameProgram.Left = this.Width/2 - NameProgram.Width/2;
         }
 
-
-        private void buttonStartGame_Click(object sender, EventArgs e)
+        void startGame()
         {
             UnFocus();
             if (this.userName.Text == "Ваше имя" || this.userName.Text == "")
@@ -35,7 +34,12 @@ namespace FormsAppCrossroad
                 game.Show();
                 this.Hide();
             }
-            
+
+        }
+
+        private void buttonStartGame_Click(object sender, EventArgs e)
+        {
+            startGame();
         }
 
         private void buttonInstruction_Click(object sender, EventArgs e)
@@ -46,10 +50,10 @@ namespace FormsAppCrossroad
             this.Hide(); 
         }
 
-        private void buttonEnd_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
+        //private void buttonEnd_Click(object sender, EventArgs e)
+        //{
+        //    Application.Exit();
+        //}
 
         private void total_Paint(object sender, PaintEventArgs e)
         {
@@ -139,6 +143,19 @@ namespace FormsAppCrossroad
         private void Menu_Click(object sender, EventArgs e)
         {
             UnFocus();
+        }
+
+        private void button1_MouseClick(object sender, MouseEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Menu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                startGame();
+            }
         }
 
         private void bestses_Paint(object sender, PaintEventArgs e)

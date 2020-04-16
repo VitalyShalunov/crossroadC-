@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FormsAppCrossroad.Bus" Collapsed="true">
+    <Position X="1.25" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="FormsAppCrossroad.MemberOfTraffic" FixedFromPoint="true">
+      <Path>
+        <Point X="2.562" Y="4.295" />
+        <Point X="2.562" Y="4.875" />
+        <Point X="2" Y="4.875" />
+        <Point X="2" Y="5.25" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bus.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormsAppCrossroad.Circle">
+    <Position X="12.75" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAACACAAAQAAAAAAAAAQAAAAAAYCQAAAQAQAAAAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="TrafficLight" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FormsAppCrossroad.Cross">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>BQAAAAAKEAEAAoAMCCIIQiAQBACIAAAQIEACcAgIgCA=</HashCode>
+      <FileName>Cross.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormsAppCrossroad.LightCar" Collapsed="true">
+    <Position X="3" Y="5.75" Width="1.5" />
+    <InheritanceLine Type="FormsAppCrossroad.MemberOfTraffic" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="2.75" Y="4.295" />
+        <Point X="2.75" Y="4.999" />
+        <Point X="3.75" Y="4.999" />
+        <Point X="3.75" Y="5.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>LightCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormsAppCrossroad.MemberOfTraffic">
+    <Position X="2.25" Y="1" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <NestedTypes>
+      <Delegate Name="FormsAppCrossroad.MemberOfTraffic.AutoEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>MemberOfTraffic.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QwCEAGBAAAAAEAIAAEAEAEBAEAAQAACEAQThIAYgYAA=</HashCode>
+      <FileName>MemberOfTraffic.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cross" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FormsAppCrossroad.SpecCar">
+    <Position X="5.75" Y="4.75" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <InheritanceLine Type="FormsAppCrossroad.MemberOfTraffic" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3.562" Y="4.295" />
+        <Point X="3.562" Y="4.507" />
+        <Point X="6.5" Y="4.507" />
+        <Point X="6.5" Y="4.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>gAgEAABAMAAAAAAAABAAABAAAAAIAACAAAABCAAAAAA=</HashCode>
+      <FileName>SpecCar.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FormsAppCrossroad.TrafficLight">
+    <Position X="10" Y="1.5" Width="1.5" />
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Properties" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAEIACCAAAAAAAACAAACAAAIAAQA=</HashCode>
+      <FileName>TrafficLight.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Cross" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="FormsAppCrossroad.Truck" Collapsed="true">
+    <Position X="4" Y="6.75" Width="1.5" />
+    <InheritanceLine Type="FormsAppCrossroad.MemberOfTraffic" ManuallyRouted="true" FixedFromPoint="true">
+      <Path>
+        <Point X="3" Y="4.295" />
+        <Point X="3" Y="4.762" />
+        <Point X="4.75" Y="4.762" />
+        <Point X="4.75" Y="6.75" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Truck.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
