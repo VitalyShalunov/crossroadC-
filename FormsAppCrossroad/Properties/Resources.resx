@@ -145,11 +145,29 @@
   <data name="spec_car1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spec_car1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spec_car1l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car1l.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spec_car1r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car1r.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spec_car2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spec_car2.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="spec_car2l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car2l.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spec_car2r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car2r.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="spec_car3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\spec_car3.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spec_car3l" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car3l.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="spec_car3r" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\spec_car3r.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="truck1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\truck1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>

@@ -28,6 +28,9 @@ namespace FormsAppCrossroad
         public delegate void ChangeLine();
         public static event ChangeLine changeLine;
 
+        public delegate void ChangeColorSpecCar();
+        public static event ChangeColorSpecCar changeColorSpecCar;
+
         protected static Graphics g;
         private static Graphics graphCross;
         public static Graphics graph
@@ -107,6 +110,7 @@ namespace FormsAppCrossroad
             timer3.Stop();
             timer4.Stop();
             timerGame.Stop();
+            lrSpecCar.Stop();
             cross = null;
             GC.Collect();
             GC.WaitForPendingFinalizers();
@@ -180,8 +184,8 @@ namespace FormsAppCrossroad
             pictureBox1.Width = this.Width;
             pictureBox1.Height = this.Height;
             
-           
             timerGame.Start();
+            lrSpecCar.Start();
         }
 
         public Crossroad()
@@ -195,6 +199,13 @@ namespace FormsAppCrossroad
             //await Task.Run(() => cross.trafficLight4.changeColor());
             await Task.Run(() => ChangeTrafficLight14());
         }
+
+        private void lrSpecCar_Tick(object sender, EventArgs e)
+        {
+            if(changeColorSpecCar !=null)
+            changeColorSpecCar();
+        }
+
         private async Task ChangeColor23()
         {
             //await Task.Run(() => cross.trafficLight2.changeColor());
@@ -230,6 +241,7 @@ namespace FormsAppCrossroad
                 timer3.Stop();
                 timer4.Stop();
                 timerGame.Stop();
+                lrSpecCar.Stop();
                 Program.menu.totalPoint = total;
                 if (Program.menu.bestSession < total)
                 {

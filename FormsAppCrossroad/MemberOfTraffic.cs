@@ -221,7 +221,6 @@ namespace FormsAppCrossroad
 
             if (this is SpecCar || !(this is SpecCar) && (existSpecCar == null || existSpecCar.ChangeLine == 0))
             {
-                MemberOfTraffic car = this;
                 switch (response)
                 {
                     case 0:

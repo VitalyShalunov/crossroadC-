@@ -153,6 +153,26 @@ namespace FormsAppCrossroad.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spec_car1l {
+            get {
+                object obj = ResourceManager.GetObject("spec_car1l", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spec_car1r {
+            get {
+                object obj = ResourceManager.GetObject("spec_car1r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spec_car2 {
             get {
                 object obj = ResourceManager.GetObject("spec_car2", resourceCulture);
@@ -163,9 +183,49 @@ namespace FormsAppCrossroad.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap spec_car2l {
+            get {
+                object obj = ResourceManager.GetObject("spec_car2l", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spec_car2r {
+            get {
+                object obj = ResourceManager.GetObject("spec_car2r", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap spec_car3 {
             get {
                 object obj = ResourceManager.GetObject("spec_car3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spec_car3l {
+            get {
+                object obj = ResourceManager.GetObject("spec_car3l", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap spec_car3r {
+            get {
+                object obj = ResourceManager.GetObject("spec_car3r", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

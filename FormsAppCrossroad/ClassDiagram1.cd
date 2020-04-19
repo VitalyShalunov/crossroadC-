@@ -36,7 +36,7 @@
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
     <TypeIdentifier>
-      <HashCode>BQAAAAAKEAEAAoAMCCIIQiAQBACIAAAQIEACcAgIgCA=</HashCode>
+      <HashCode>BQAAAAAKEAEAAoAMCCIIQiBQBACIAAAQIEACcAgIgCA=</HashCode>
       <FileName>Cross.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -98,7 +98,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAgEAABAMAAAAAAAIBAAABAAAAAIAACAAAABCAAAAAA=</HashCode>
+      <HashCode>gAgEAABAMAAAAAAAIBABABAAABAIIACAAAABCAAAAAA=</HashCode>
       <FileName>SpecCar.cs</FileName>
     </TypeIdentifier>
   </Class>

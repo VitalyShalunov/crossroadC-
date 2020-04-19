@@ -14,47 +14,53 @@ namespace FormsAppCrossroad
 		private string pathFile = "img/spec_car";
 		public delegate int SpecEvent(ref MemberOfTraffic car);
 		public static event SpecEvent MoveSpecEvent;
+		int lr;
+		int typeSpec;
 		public SpecCar() : base(55, 80, 8)
 		{
+			lr = 0;
 			switch (random.Next(1, 4))
 			{
 				case 1:
-					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car1);
+					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car1l);
+					typeSpec = 1;
 					break;
 				case 2:
-					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car2);
+					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car2l);
+					typeSpec = 2;
 					break;
 				case 3:
-					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car3);
+					img = new Bitmap(FormsAppCrossroad.Properties.Resources.spec_car3l);
+					typeSpec = 3;
 					break;
 			}
 			MemberOfTraffic own = this;
 			Rotate(ref own);
-			int color1, color2, color3;
-			switch (random.Next(0, 3))
-			{
-				case 0:
-					color1 = 189;
-					color2 = 21;
-					color3 = 21;
-					break;
-				case 1:
-					color1 = 247;
-					color2 = 240;
-					color3 = 240;
-					break;
-				case 2:
-					color1 = 35;
-					color2 = 62;
-					color3 = 196;
-					break;
-				default:
-					color1 = 189;
-					color2 = 21;
-					color3 = 21;
-					break;
-			}
-			color = Color.FromArgb(255, color1, color2, color3);
+			//int color1, color2, color3;
+			//switch (random.Next(0, 3))
+			//{
+			//	case 0:
+			//		color1 = 189;
+			//		color2 = 21;
+			//		color3 = 21;
+			//		break;
+			//	case 1:
+			//		color1 = 247;
+			//		color2 = 240;
+			//		color3 = 240;
+			//		break;
+			//	case 2:
+			//		color1 = 35;
+			//		color2 = 62;
+			//		color3 = 196;
+			//		break;
+			//	default:
+			//		color1 = 189;
+			//		color2 = 21;
+			//		color3 = 21;
+			//		break;
+			//}
+			//color = Color.FromArgb(255, color1, color2, color3);
 			
 			switch (Destination) //начальные кординаты в зависимости от направления движения
 			{
@@ -88,6 +94,7 @@ namespace FormsAppCrossroad
 			CheckSetLink = 1;
 
 			Crossroad.changeLine += new Crossroad.ChangeLine(ChangePropertyAtTheSpecCar);
+			Crossroad.changeColorSpecCar += new Crossroad.ChangeColorSpecCar(ChangeImage);
 		}
 		public int ChangeLine { get; private set; }
 		public int CheckSetLink { get; private set; }
@@ -244,6 +251,50 @@ namespace FormsAppCrossroad
 
 		}
 
+		void ChangeImage()
+		{
+			switch (typeSpec)
+			{
+				case 1:
+					if(lr==0)
+					{
+						lr = 1;
+						img = FormsAppCrossroad.Properties.Resources.spec_car1r;
+					}
+					else
+					{
+						lr = 0;
+						img = FormsAppCrossroad.Properties.Resources.spec_car1l;
+					}
+					break;
+				case 2:
+					if (lr == 0)
+					{
+						lr = 1;
+						img = FormsAppCrossroad.Properties.Resources.spec_car2r;
+					}
+					else
+					{
+						lr = 0;
+						img = FormsAppCrossroad.Properties.Resources.spec_car2l;
+					}
+					break;
+				case 3:
+					if (lr == 0)
+					{
+						lr = 1;
+						img = FormsAppCrossroad.Properties.Resources.spec_car3r;
+					}
+					else
+					{
+						lr = 0;
+						img = FormsAppCrossroad.Properties.Resources.spec_car3r;
+					}
+					break;
+			}
+			MemberOfTraffic own = this;
+			Rotate(ref own);
+		}
 		void RideOwn(int inout)
 		{
 			int response = 0;

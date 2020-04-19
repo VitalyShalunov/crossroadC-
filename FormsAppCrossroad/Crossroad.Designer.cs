@@ -36,6 +36,7 @@
             this.timer3 = new System.Windows.Forms.Timer(this.components);
             this.timer4 = new System.Windows.Forms.Timer(this.components);
             this.timerGame = new System.Windows.Forms.Timer(this.components);
+            this.lrSpecCar = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -85,6 +86,11 @@
             this.timerGame.Interval = 10;
             this.timerGame.Tick += new System.EventHandler(this.timerGame_Tick_1);
             // 
+            // lrSpecCar
+            // 
+            this.lrSpecCar.Interval = 500;
+            this.lrSpecCar.Tick += new System.EventHandler(this.lrSpecCar_Tick);
+            // 
             // Crossroad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -111,5 +117,6 @@
         protected System.Windows.Forms.Timer timer4;
         protected System.Windows.Forms.Timer timerGame;
         public System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer lrSpecCar;
     }
 }
