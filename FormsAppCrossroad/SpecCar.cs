@@ -133,10 +133,10 @@ namespace FormsAppCrossroad
 			switch (ChangeLine)
 			{
 				case 0:
-					if (DistanceToNext > 30)
-					{
-						speedNow = MaxSpeed;
-					}
+					//if (DistanceToNext > 30)
+					//{
+					//	speedNow = MaxSpeed;
+					//}
 					checkCoord = CheckCoord();
 					if (AtTheLine == 2 && checkCoord == 1)
 					{
@@ -205,14 +205,15 @@ namespace FormsAppCrossroad
 						{
 							ChangeLine = 1;
 						}
-						if (DistanceToNext < 30)
-						{
-							speedNow = Next.SpeedNow;
-							if (DistanceToNext < 15)
-							{
-								speedNow = Next.SpeedNow;
-							}
-						}
+						//if (DistanceToNext < 30)
+						//{
+						//	speedNow = Next.SpeedNow;
+						//	if (DistanceToNext < 15)
+						//	{
+						//		speedNow = Next.SpeedNow;
+						//	}
+						//}
+						SetSpeed();
 
 						RideOwn(0);
 					}
@@ -247,7 +248,12 @@ namespace FormsAppCrossroad
 		{
 			int response = 0;
 			MemberOfTraffic member = this;
-			response = MoveSpecEvent(ref member);
+			int middle = Crossroad.cross.AboutMiddle(ref member);
+			if (middle == 0)
+			{
+				response = MoveSpecEvent(ref member);
+			}
+			else response = 1;
 			//response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
 			//response = MemberOfTraffic.MoveEvent(this.Destination - 1, ref member);
 			if (response != 0)

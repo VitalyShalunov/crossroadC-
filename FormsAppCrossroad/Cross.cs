@@ -422,6 +422,43 @@ namespace FormsAppCrossroad
             }
         }
 
+        public int AboutMiddle(ref MemberOfTraffic car)
+        {
+            switch (car.Destination)
+            {
+                case 1:
+                    if (car.Y < form.Height / 2 - 110 && car.Y > form.Height / 2 - 130)
+                    {
+                        return 0;
+                    }
+                    else
+                        return 2;
+                case 2:
+                    if (car.X > form.Width / 2 + 110 && car.X < form.Width / 2 + 130)
+                    {
+                        return 0;
+                    }
+                    else
+                        return 2;
+                case 3:
+                    if (car.X < form.Width / 2 - 110 && car.X > form.Width / 2 - 130)
+                    {
+                        return 0;
+                    }
+                    else
+                        return 2;
+                case 4:
+                    if (car.Y > form.Height / 2 + 110 && car.Y < form.Height / 2 + 130)
+                    {
+                        return 0;
+                    }
+                    else
+                        return 2;
+                default:
+                    return 0;
+            }
+        }
+
         /// <summary>
         /// Может ли ехать автомобиль
         /// </summary>
@@ -433,45 +470,22 @@ namespace FormsAppCrossroad
                     return 1;
                 else
                 {
-                    var answer = CheckCrossSpecCar(ref car);
+                    int middle = AboutMiddle(ref car);
+                    int answer;
+                    if (middle == 0)
+                    {
+                        answer = CheckCrossSpecCar(ref car);
+                    }
+                    else
+                    {
+                        answer = 1;
+                    }
                     return answer;
                 }
             }
             else
             {
-                switch (car.Destination)
-                {
-                    case 1:
-                        if (car.Y < form.Height / 2 - 110 && car.Y > form.Height / 2 - 130)
-                        {
-                            return 0;
-                        }
-                        else
-                            return 2;
-                    case 2:
-                        if (car.X > form.Width / 2 + 110 && car.X < form.Width / 2 + 130)
-                        {
-                            return 0;
-                        }
-                        else
-                            return 2;
-                    case 3:
-                        if (car.X < form.Width / 2 - 110 && car.X > form.Width / 2 - 130)
-                        {
-                            return 0;
-                        }
-                        else
-                            return 2;
-                    case 4:
-                        if (car.Y > form.Height / 2 + 110 && car.Y < form.Height / 2 + 130)
-                        {
-                            return 0;
-                        }
-                        else
-                            return 2;
-                    default:
-                        return 0;
-                }
+                return AboutMiddle(ref car);
             }
         }
 

@@ -210,6 +210,7 @@ namespace FormsAppCrossroad
             int response;
             MemberOfTraffic member = this;
             //response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
+
             response = MoveEvent(this.Destination - 1, ref member);
             SpecCar existSpecCar = null;
 
