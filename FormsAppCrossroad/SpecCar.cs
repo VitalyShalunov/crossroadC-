@@ -12,6 +12,8 @@ namespace FormsAppCrossroad
 		private int trigger = 0;
 		private Random rnd = new Random();
 		private string pathFile = "img/spec_car";
+		public delegate int SpecEvent(ref MemberOfTraffic car);
+		public static event SpecEvent MoveSpecEvent;
 		public SpecCar() : base(55, 80, 8)
 		{
 			switch (random.Next(1, 4))
@@ -245,7 +247,8 @@ namespace FormsAppCrossroad
 		{
 			int response = 0;
 			MemberOfTraffic member = this;
-			response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
+			response = MoveSpecEvent(ref member);
+			//response = Crossroad.cross.SkipOrNot(this.Destination - 1, ref member);
 			//response = MemberOfTraffic.MoveEvent(this.Destination - 1, ref member);
 			if (response != 0)
 			{

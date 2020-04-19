@@ -82,6 +82,13 @@
       <Compartment Name="Fields" Collapsed="true" />
       <Compartment Name="Properties" Collapsed="true" />
     </Compartments>
+    <NestedTypes>
+      <Delegate Name="FormsAppCrossroad.SpecCar.SpecEvent" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>SpecCar.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
     <InheritanceLine Type="FormsAppCrossroad.MemberOfTraffic" ManuallyRouted="true" FixedFromPoint="true">
       <Path>
         <Point X="3.562" Y="4.295" />
@@ -91,7 +98,7 @@
       </Path>
     </InheritanceLine>
     <TypeIdentifier>
-      <HashCode>gAgEAABAMAAAAAAAABAAABAAAAAIAACAAAABCAAAAAA=</HashCode>
+      <HashCode>gAgEAABAMAAAAAAAIBAAABAAAAAIAACAAAABCAAAAAA=</HashCode>
       <FileName>SpecCar.cs</FileName>
     </TypeIdentifier>
   </Class>

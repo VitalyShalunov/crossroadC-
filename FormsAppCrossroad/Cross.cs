@@ -51,13 +51,14 @@ namespace FormsAppCrossroad
                 trafficLights.Add(new TrafficLight(i));
             }
             MemberOfTraffic.MoveEvent += new MemberOfTraffic.AutoEvent(SkipOrNot);
+            SpecCar.MoveSpecEvent += new SpecCar.SpecEvent(CheckCrossSpecCar);
             Paint();
             PaintTraffic();
         }
         /// <summary>
         /// Отрисовка перекрестка
         /// </summary>
-        public void Paint()
+        private void Paint()
         {
             Brush brush = new SolidBrush(Color.DimGray);
             Rectangle r = new Rectangle(0, 0, this.Width, this.Height);
@@ -96,7 +97,7 @@ namespace FormsAppCrossroad
            
         }
 
-        public void PaintTraffic()
+        private void PaintTraffic()
         {
             for (int i = 0; i < 4; i++)
             {
@@ -1258,7 +1259,7 @@ namespace FormsAppCrossroad
         /// <summary>
         /// проверка пересекутся ли спец.транспорты, если да, то пропустить по правилу помехи справа
         /// </summary>
-        int CheckCrossSpecCar(ref MemberOfTraffic car)
+        public int CheckCrossSpecCar(ref MemberOfTraffic car)
         {
             switch (car.Destination)
             {
